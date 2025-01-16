@@ -11,11 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('sales', function (Blueprint $table) {
-            $table->id();
-            $table->bigInteger('inventory_id')->unsigned()->nullable();
-            $table->integer('quantity')->unsigned()->default(0)->nullable();
-            $table->double('price')->unsigned()->default(0)->nullable();
+        Schema::create('salesmen', function (Blueprint $table) {
+            $table->id('SalesmanID');
+            $table->string('SalesmanName');
             $table->timestamps();
         });
     }
@@ -25,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('sales');
+        Schema::dropIfExists('salesmen');
     }
 };

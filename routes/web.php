@@ -4,6 +4,7 @@ use App\Http\Controllers\Apps\AuthController;
 use App\Http\Controllers\Apps\DashboardController;
 use App\Http\Controllers\Apps\InventoryController;
 use App\Http\Controllers\Apps\PurchaseController;
+use App\Http\Controllers\Apps\ReportController;
 use App\Http\Controllers\Apps\SalesController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,7 +32,5 @@ Route::middleware('auth')->group(function () {
     Route::get('logout',[AuthController::class, 'logout'])->name('app.logout');
 
     Route::get('dashboard', [DashboardController::class, 'index'])->name('app.dashboard.index');
-    Route::resource('inventory', InventoryController::class)->names('app.inventory');
-    Route::resource('purchase', PurchaseController::class)->names('app.purchase');
-    Route::resource('sales', SalesController::class)->names('app.sales');
+    Route::get('report', [ReportController::class, 'index'])->name('report.index');
 });

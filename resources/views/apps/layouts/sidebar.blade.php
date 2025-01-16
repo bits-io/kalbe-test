@@ -11,7 +11,7 @@
                             <!-- <li><a href="./index-2.html">Home 2</a></li> -->
                         </ul>
                     </li>
-                    <li class="nav-label">Master</li>
+                    {{-- <li class="nav-label">Master</li>
                     <li class="mega-menu mega-menu-sm">
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="icon-globe-alt menu-icon"></i><span class="nav-text">Master Data</span>
@@ -28,6 +28,15 @@
                         <ul aria-expanded="false">
                             <li><a href="{{ route('app.purchase.index') }}">Purchace</a></li>
                             <li><a href="{{ route('app.sales.index') }}">Sales</a></li>
+                        </ul>
+                    </li> --}}
+                    <li class="nav-label">Report</li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-screen-tablet menu-icon"></i><span class="nav-text">Report</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="{{ route('report.index') }}">Report</a></li>
                         </ul>
                     </li>
                 </ul>

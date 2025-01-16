@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('inventories', function (Blueprint $table) {
+        Schema::create('user_regions', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable();
-            $table->double('price')->default(0)->unsigned()->nullable();
-            $table->integer('stock')->default(5)->unsigned()->nullable();
+            $table->unsignedBigInteger('UserID');
+            $table->string('Region');
             $table->timestamps();
         });
     }
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('inventories');
+        Schema::dropIfExists('user_regions');
     }
 };
